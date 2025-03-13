@@ -6,7 +6,6 @@
   - The function iterates through the input list and prints `"Yes"` if an element has already been seen, or `"No"` if it's the first occurrence.
   - Example usage:
     ```python
-    from yes_no_func import yes_or_no
 
     input_list = [1, 2, 3, 1, 2, 4, 2]
     yes_or_no(input_list)
