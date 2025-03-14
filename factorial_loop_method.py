@@ -1,7 +1,7 @@
 #factorial_loop_method
 def factorial_loop(n):
     if n < 0:
-        print("Factoriel is not defiend")
+        raise ValueError("Factorial is not defined for negative numbers")
     if n == 0:
         return 1
     result = 1
@@ -9,5 +9,4 @@ def factorial_loop(n):
         result *= i
     return result
 
-
-print(factorial_loop(5))
+print(factorial_loop(5))  # 120
