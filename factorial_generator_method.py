@@ -2,7 +2,7 @@
 
 def factorial_generator(n):
     if n < 0:
-        print("Factorial is not defined for negative numbers")
+        raise ValueError("Factorial is not defined for negative numbers")
     if n == 0:
         yield 1
         return
@@ -11,6 +11,7 @@ def factorial_generator(n):
         result *= i
         yield result
 
+def get_factorial(n):
+    return list(factorial_generator(n))[-1]
 
-for value in factorial_generator(5):
-    print(value)
+print(get_factorial(5))  # 120
