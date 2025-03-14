@@ -40,13 +40,6 @@ Recursive: 120
 Loop: 120
 Generator: 120
 
-text
-
-Collapse
-
-Wrap
-
-Copy
 
 ## Implementation Details
 1. **Recursive Method (`factorial_recursive`)**  
