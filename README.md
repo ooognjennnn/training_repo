@@ -1,66 +1,27 @@
-# training_repo
-### Task 1: yes_or_no Function
-- **Description**: Implemented the `yes_or_no` function to check for duplicate elements in a list.
-- **Status**: Completed ✅
-- **Details**:
-  - The function iterates through the input list and prints `"Yes"` if an element has already been seen, or `"No"` if it's the first occurrence.
-  - Example usage:
-    ```python
+# Bubble Sort Task
 
-    input_list = [1, 2, 3, 1, 2, 4, 2]
-    yes_or_no(input_list)
-    ```
-  - Expected Output:
-    ```
-    No
-    No
-    No
-    Yes
-    Yes
-    No
-    Yes
-    ```
+This branch contains a simple implementation of the Bubble Sort algorithm as part of a training task.
 
-    
-# Task -3 Factorial Calculation Implementations
+## Overview
+The purpose of this task was to implement a bubble sort algorithm in Python and provide test cases to verify its correctness. The code is organized in the `task_2/` directory.
 
-This project contains three different implementations of factorial calculation (`n!`) in Python, as per the task requirements. Each method takes an integer `n` and returns its factorial (`n!`).
-
-## Features
-- **Recursive**: Uses recursive function calls to compute `n!`.
-- **Loop**: Uses an iterative approach with a for loop.
-- **Generator**: Uses a generator with a helper function to compute `n!`.
-
-All implementations:
-- Raise a `ValueError` for negative numbers.
-- Return `1` for `n = 0` (since `0! = 1`).
-- Are tested with examples like `n = 5` (returns `120`) and `n = 0` (returns `1`).
-
-
-## Usage
-Run the Python script and call any of the functions with `n = 5`. All methods return the same result:
-Recursive: 120
-Loop: 120
-Generator: 120
-
-
+## Files
+- **`task_2/bubble_sort.py`**: Contains the bubble sort implementation.
+- **`task_2/tests/test_bubble_sort.py`**: Contains test cases to validate the sorting algorithm.
+- **`.gitignore`**: Ignores unnecessary files like `__pycache__` and `.pyc` files.
 
 ## Implementation Details
-1. **Recursive Method (`factorial_recursion`)**  
-   - Uses recursion: `n! = n * (n-1)!`.
-   - Base cases: `0! = 1`, `1! = 1`.
+- **Algorithm**: Bubble Sort
+- **Time Complexity**: 
+  - Worst case: O(n²)
+  - Best case: O(n²) (no early exit optimization)
+  - Average case: O(n²)
+- **Space Complexity**: O(1) (in-place sorting)
+- **Features**:
+  - Sorts the input list in ascending order by comparing and swapping adjacent elements.
+  - Modifies the input list directly (in-place).
 
-2. **Loop Method (`factorial_loop`)**  
-   - Iterates from 1 to `n`, multiplying each number into a result.
-   - Efficient for larger numbers (no recursion depth limit).
-
-3. **Generator Method (`factorial_generator` with `get_factorial`)**  
-   - Yields intermediate factorial results (e.g., `1, 2, 6, 24, 120` for `n=5`).
-   - `get_factorial` extracts the final `n!` from the generator.
-
-## Code Example
-```python
-# Example usage
-print(factorial_recursion(5))  # 120
-print(factorial_loop(5))       # 120
-print(get_factorial(5))        # 120
+## How to Run
+1. Navigate to the `task_2/` directory:
+   ```bash
+   cd task_2
