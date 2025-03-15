@@ -14,4 +14,3 @@ def factorial_generator(n):
 def get_factorial(n):
     return list(factorial_generator(n))[-1]
 
-print(get_factorial(5))  # 120
