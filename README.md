@@ -1,27 +1,29 @@
-# Bubble Sort Task
+# Fibonacci Calculation Task
 
-This branch contains a simple implementation of the Bubble Sort algorithm as part of a training task.
+This task implements three methods to calculate Fibonacci numbers: recursive, loop-based, and generator-based, along with tests.
 
 ## Overview
-The purpose of this task was to implement a bubble sort algorithm in Python and provide test cases to verify its correctness. The code is organized in the `task_2/` directory.
+The goal is to compute Fibonacci numbers using different approaches and verify them with test cases. Each method is implemented in a separate file under `task_4/`.
 
 ## Files
-- **`task_2/bubble_sort.py`**: Contains the bubble sort implementation.
-- **`task_2/tests/test_bubble_sort.py`**: Contains test cases to validate the sorting algorithm.
-- **`.gitignore`**: Ignores unnecessary files like `__pycache__` and `.pyc` files.
+- **`task_4/fibonacci_recursive_method.py`**: Recursive Fibonacci implementation.
+- **`task_4/fibonacci_loop_method.py`**: Iterative (loop-based) Fibonacci implementation.
+- **`task_4/fibonacci_generator_method.py`**: Generator-based Fibonacci implementation.
+- **`task_4/tests/test_fibonacci_recursive_method.py`**: Tests for the recursive method.
+- **`task_4/tests/test_fibonacci_loop_method.py`**: Tests for the loop method.
+- **`task_4/tests/test_fibonacci_generator_method.py`**: Tests for the generator method.
+- **`.gitignore`**: Ignores compiled files like `.pyc` and `__pycache__`.
 
 ## Implementation Details
-- **Algorithm**: Bubble Sort
-- **Time Complexity**: 
-  - Worst case: O(n²)
-  - Best case: O(n²) (no early exit optimization)
-  - Average case: O(n²)
-- **Space Complexity**: O(1) (in-place sorting)
-- **Features**:
-  - Sorts the input list in ascending order by comparing and swapping adjacent elements.
-  - Modifies the input list directly (in-place).
+- **Recursive Method**: Calculates Fibonacci(n) recursively (e.g., `fib(n-1) + fib(n-2)`).
+- **Loop Method**: Uses a loop to iteratively compute Fibonacci numbers.
+- **Generator Method**: Yields Fibonacci numbers incrementally using a generator.
+- **Time Complexity**:
+  - Recursive: O(2^n) due to exponential recursive calls.
+  - Loop: O(n) as it iterates linearly.
+  - Generator: O(n) to generate n numbers.
+- **Space Complexity**:
+  - Recursive: O(n) due to call stack.
+  - Loop: O(1) as it uses constant extra space.
+  - Generator: O(1) per yield.
 
-## How to Run
-1. Navigate to the `task_2/` directory:
-   ```bash
-   cd task_2
