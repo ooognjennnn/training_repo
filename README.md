@@ -1,66 +1,29 @@
-# training_repo
-### Task 1: yes_or_no Function
-- **Description**: Implemented the `yes_or_no` function to check for duplicate elements in a list.
-- **Status**: Completed ✅
-- **Details**:
-  - The function iterates through the input list and prints `"Yes"` if an element has already been seen, or `"No"` if it's the first occurrence.
-  - Example usage:
-    ```python
+# Fibonacci Calculation Task
 
-    input_list = [1, 2, 3, 1, 2, 4, 2]
-    yes_or_no(input_list)
-    ```
-  - Expected Output:
-    ```
-    No
-    No
-    No
-    Yes
-    Yes
-    No
-    Yes
-    ```
+This task implements three methods to calculate Fibonacci numbers: recursive, loop-based, and generator-based, along with tests.
 
-    
-# Task -3 Factorial Calculation Implementations
+## Overview
+The goal is to compute Fibonacci numbers using different approaches and verify them with test cases. Each method is implemented in a separate file under `task_4/`.
 
-This project contains three different implementations of factorial calculation (`n!`) in Python, as per the task requirements. Each method takes an integer `n` and returns its factorial (`n!`).
-
-## Features
-- **Recursive**: Uses recursive function calls to compute `n!`.
-- **Loop**: Uses an iterative approach with a for loop.
-- **Generator**: Uses a generator with a helper function to compute `n!`.
-
-All implementations:
-- Raise a `ValueError` for negative numbers.
-- Return `1` for `n = 0` (since `0! = 1`).
-- Are tested with examples like `n = 5` (returns `120`) and `n = 0` (returns `1`).
-
-
-## Usage
-Run the Python script and call any of the functions with `n = 5`. All methods return the same result:
-Recursive: 120
-Loop: 120
-Generator: 120
-
-
+## Files
+- **`task_4/fibonacci_recursive_method.py`**: Recursive Fibonacci implementation.
+- **`task_4/fibonacci_loop_method.py`**: Iterative (loop-based) Fibonacci implementation.
+- **`task_4/fibonacci_generator_method.py`**: Generator-based Fibonacci implementation.
+- **`task_4/tests/test_fibonacci_recursive_method.py`**: Tests for the recursive method.
+- **`task_4/tests/test_fibonacci_loop_method.py`**: Tests for the loop method.
+- **`task_4/tests/test_fibonacci_generator_method.py`**: Tests for the generator method.
+- **`.gitignore`**: Ignores compiled files like `.pyc` and `__pycache__`.
 
 ## Implementation Details
-1. **Recursive Method (`factorial_recursion`)**  
-   - Uses recursion: `n! = n * (n-1)!`.
-   - Base cases: `0! = 1`, `1! = 1`.
+- **Recursive Method**: Calculates Fibonacci(n) recursively (e.g., `fib(n-1) + fib(n-2)`).
+- **Loop Method**: Uses a loop to iteratively compute Fibonacci numbers.
+- **Generator Method**: Yields Fibonacci numbers incrementally using a generator.
+- **Time Complexity**:
+  - Recursive: O(2^n) due to exponential recursive calls.
+  - Loop: O(n) as it iterates linearly.
+  - Generator: O(n) to generate n numbers.
+- **Space Complexity**:
+  - Recursive: O(n) due to call stack.
+  - Loop: O(1) as it uses constant extra space.
+  - Generator: O(1) per yield.
 
-2. **Loop Method (`factorial_loop`)**  
-   - Iterates from 1 to `n`, multiplying each number into a result.
-   - Efficient for larger numbers (no recursion depth limit).
-
-3. **Generator Method (`factorial_generator` with `get_factorial`)**  
-   - Yields intermediate factorial results (e.g., `1, 2, 6, 24, 120` for `n=5`).
-   - `get_factorial` extracts the final `n!` from the generator.
-
-## Code Example
-```python
-# Example usage
-print(factorial_recursion(5))  # 120
-print(factorial_loop(5))       # 120
-print(get_factorial(5))        # 120
