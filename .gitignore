@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Python cache
 __pycache__/
 *.py[cod]
@@ -20,3 +21,10 @@ venv/
 Thumbs.db
 desktop.ini
 *~
+=======
+# Ignore __pycache__ folders
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+>>>>>>> 425d2d1a8d99bf2fc61328ea34b28c1e7e36d387
