@@ -1,4 +1,4 @@
-from ..find_repeated_elements import find_repeated_elements
+from task_6.find_repeated_elements import find_repeated_elements
 
 def test_find_repeated_elements():
     # Test 1: List with repeats
@@ -16,8 +16,3 @@ def test_find_repeated_elements():
     # Test 4: Empty list
     result = find_repeated_elements([])
     assert result == [], f"Expected [], got {result}"
-
-    print("All tests passed!")
-
-if __name__ == "__main__":
-    test_find_repeated_elements()
