@@ -1,5 +1,21 @@
-# Ignore __pycache__ folders
+# Python cache
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
+
+# pytest cache
+.pytest_cache/
+
+# Virtual environments
+env/
+venv/
+
+# Editor-specific
+.vscode/
+.idea/
+
+# System-specific
+.DS_Store
+desktop.ini
+Thumbs.db
