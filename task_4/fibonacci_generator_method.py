@@ -1,16 +1,9 @@
-def fibonacci_generator(n: int) -> int:
+def fibonacci_generator(n: int):
+    """Generates the first n Fibonacci numbers."""
     if n <= 0:
         raise ValueError("n must be a positive integer")
-
-    def fib_gen():
-        a, b = 1, 1
+    
+    a, b = 1, 1
+    for _ in range(n):  # Generate n Fibonacci numbers
         yield a
-        yield b
-        while True:
-            a, b = b, a + b
-            yield b
-
-    fib = fib_gen()
-    for _ in range(n):
-        result = next(fib)
-    return result
+        a, b = b, a + b
