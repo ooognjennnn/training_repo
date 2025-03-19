@@ -1,5 +1,16 @@
-# Ignore __pycache__ folders
+# Python cache and build
 __pycache__/
 *.pyc
 *.pyo
-*.pyd
+
+# Test-related cache
+pytest_cache/
+.pycharm/
+
+# Environment files
+*.env
+*.venv
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
