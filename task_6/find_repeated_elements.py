@@ -8,4 +8,4 @@ def find_repeated_elements(nums):
         else:
             seen.add(num)  # Otherwise, add it to the seen set
 
-    return list(repeated)  # Return the list of repeated elements
+    return repeated  # Return set directly
