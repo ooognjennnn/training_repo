@@ -1,4 +1,4 @@
-#factorial_func
+#factorial_recursive_method
 
 def factorial_recursive(n):
     if n < 0:
